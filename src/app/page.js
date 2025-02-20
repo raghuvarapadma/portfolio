@@ -50,7 +50,7 @@ export default function Home() {
         </div>
         <div className="flex-1 flex items-center justify-center">
           <div className="w-64 h-64 rounded-full overflow-hidden">
-            <img src="/headshot_edited.JPG" className="w-full h-full object-cover"/>
+            <img src="/headshot.jpg" className="w-full h-full object-cover"/>
           </div>
         </div>
       </div>
