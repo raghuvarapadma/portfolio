@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-normal: 'Rubik', system-ui, sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +19,22 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:var(--font-normal);
+
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 100rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 50rem) {
+  .container {
+    width: 40%; 
+    margin: 0 auto; 
+    padding: 0;
+  }
 }

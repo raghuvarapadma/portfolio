@@ -11,6 +11,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        normal: ['var(--font-normal)', 'sans-serif'],
+        code: ['var(--font-code)', 'monospace'],
+      },
     },
   },
   plugins: [],
