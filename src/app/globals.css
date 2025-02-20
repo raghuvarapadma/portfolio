@@ -7,6 +7,7 @@
   --foreground: #171717;
   --font-normal: 'Rubik', system-ui, sans-serif;
   --font-code: 'JetBrains Mono', monospace;
+  font-size: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
