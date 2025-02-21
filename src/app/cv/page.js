@@ -26,8 +26,10 @@ export default function CV() {
             </div>
             <div className="border-t-2 border-[#097969] my-6"></div>
             <div className="my-3 flex flex-col">
-                <div className="text-2xl font-code inline-block hover:text-[#097969]" onMouseEnter={() => setEducationText(true)} onMouseLeave={() => setEducationText(false)}>
-                    {educationText}
+                <div className="text-2xl font-code" >
+                    <div className="inline-block hover:text-[#097969]" onMouseEnter={() => setEducationText(true)} onMouseLeave={() => setEducationText(false)}>
+                        {educationText}
+                    </div>
                 </div>
                 <div className="flex flex-row justify-between">
                     <div>
