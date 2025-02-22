@@ -2,10 +2,16 @@
 import { useState, useEffect } from "react";
 
 export function binaryEffect(originalText) {
-    const [text, setText] = useState(originalText);
+    const [text, setText] = useState(null);
     const [hoveringOverText, setHoveringOverText] = useState(false);
 
     useEffect(() => {
+        setText(originalText);
+    }, [originalText]);
+
+    useEffect(() => {
+        if (text === null) return;
+        
         let interval;
 
         if (hoveringOverText) {
@@ -22,7 +28,7 @@ export function binaryEffect(originalText) {
         }
 
         return () => clearInterval(interval);
-    }, [hoveringOverText]);
+    }, [hoveringOverText, originalText, text]);
 
-    return [text, setHoveringOverText]
+    return [text !== null ? text : originalText, setHoveringOverText];
 };

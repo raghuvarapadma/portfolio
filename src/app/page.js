@@ -79,7 +79,7 @@ export default function Home() {
           <br />
           Currently, I work as a software engineer at Capital One in the Retail Banking space, where I help facilitate the movement of money between different banking products owned by Capital One. <br />
           <br />
-          Outside of work, I have a few hobbies I enjoy. Being from Charlotte, NC, I’m a Panthers fan (unfortunately) and a UNC fan. When I’m not suffering through NFL Sundays, I love reading, watching movies, exploring new TV shows, and trying to stay active. I also enjoy spending time outdoors—over the past year, I’ve picked up skiing and golfing (still a work in progress on both).<br /> 
+          Outside of work, I have a few hobbies I enjoy. Being from Charlotte, NC, I'm a Panthers fan (unfortunately) and a UNC fan. Aside from watching football, I love reading, watching movies, exploring new TV shows, and trying to stay active. I also enjoy spending time outdoors—over the past year, I've picked up skiing and golfing (still a work in progress on both).<br /> 
           <br />
           One of my goals this year is to be better about meeting new people. Whether you want to talk about software engineering, say hi, or discuss anything else, feel free to reach out to me via any of the methods above. The best way to get in touch is through email at raghuvarapadma [@] gmail.com.<br />
         </div>
