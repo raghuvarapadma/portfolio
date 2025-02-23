@@ -25,7 +25,7 @@ const CourseList = () => {
   ];
 
   return (
-    <div className="text-xs">
+    <div className="text-md">
       <div className="flex flex-wrap" style={{ lineHeight: '2' }}>
         {courses.map((course, index) => (
           <div 

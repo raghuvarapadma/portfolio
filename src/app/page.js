@@ -26,7 +26,7 @@ export default function Home() {
               Software Engineer
             </div>
           </div>
-          <div className="my-3">
+          {/* <div className="my-3">
             <div className="flex flex-row">
               <div>
                 <img src="/map-pin.svg" className="w-5 h-5"/>
@@ -35,7 +35,7 @@ export default function Home() {
                 Arlington, VA
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="my-3 flex flex-col gap-2">
             <div className="flex flex-row gap-1">
               <div>
