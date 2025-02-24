@@ -55,7 +55,7 @@ export default function ProjectsList() {
                                         </CardTitle>
                                         {project.link && (
                                             <CardDescription className="text-sm flex flex-wrap">
-                                                <Link className="break-all" href="https://github.com/raghuvarapadma/portfolio">{project.link}</Link>
+                                                <Link className="break-all" href={project.link}>{project.link}</Link>
                                             </CardDescription>
                                         )}
                                     </CardHeader>
