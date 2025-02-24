@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { Badge } from './ui/badge';
 
 const CourseList = () => {
   const courses = [
@@ -26,15 +27,18 @@ const CourseList = () => {
 
   return (
     <div className="text-md">
-      <div className="flex flex-wrap" style={{ lineHeight: '2' }}>
+      <div className="flex flex-wrap gap-1" style={{ lineHeight: '2' }}>
         {courses.map((course, index) => (
-          <div 
-            key={index} 
-            className="border-l border-r border-[#097969] pl-2 pr-2 mb-1"
-            style={{ boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone' }}
-          >
-            {course}
+          <div key={index}>
+            <Badge>{course}</Badge>
           </div>
+          // <div 
+          //   key={index} 
+          //   className="border-l border-r border-[#097969] pl-2 pr-2 mb-1"
+          //   style={{ boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone' }}
+          // >
+          //   {course}
+          // </div>
         ))}
       </div>
     </div>

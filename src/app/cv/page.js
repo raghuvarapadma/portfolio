@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "@/components/nav";
 import {binaryEffect} from "../../components/binaryEffect";
 import CourseList from "@/components/courseList";
@@ -23,13 +23,19 @@ export default function CV() {
 
     const [showSection, setShowSection] = useState(false);
 
+    const [isVisible, setIsVisible] = useState(false);
+    
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
+
     const handleSectionToggle = () => {
         setShowSection(!showSection);
     }
 
 
     return (
-        <div>
+        <div className={`transition-all duration-500 ease-out ${isVisible ? 'h-full opacity-100' : 'h-0 opacity-0'}`}>
             <Nav></Nav>
             <div className="text-3xl my-3">
                 <div className="font-code inline-block hover:text-[#097969]" onMouseEnter={() => setCVText(true)} onMouseLeave={() => setCVText(false)}>
@@ -43,12 +49,12 @@ export default function CV() {
                         {educationText}
                     </div>
                 </div>
-                <div className="flex flex-row justify-between">
+                <div className="mt-1 flex flex-row justify-between">
                     <div>
                         <div className="text-lg">
                             <strong>University of North Carolina at Chapel Hill</strong>
                         </div>
-                        <div className="text-md my-.5">
+                        <div className="text-md">
                             Bachelor of Science in Computer Science, Minor in Statistics
                         </div>
                         <div className="text-md">
@@ -69,24 +75,20 @@ export default function CV() {
                         <AccordionTrigger className="text-md">Involvement</AccordionTrigger>
                         <AccordionContent>
                             <div className="text-md mb-2 border-l border-[#097969] pl-2 pr-2">
-                                <div >ACM @ UNC</div>
+                                <div><strong>ACM @ UNC</strong></div>
                                 <div>Founder and President</div>
-                                <div>2020-2022</div>
+                                <div className="text-sm mb-1">2020-2022</div>
+                                <div>
+                                Launched and led an ACM chapter at UNC, recruiting 150+ members and building relationships with 5+ companies, the student body, and the CS department. Organized 10+ events, including a HackNC kickoff and a talk with Fred Brooks (Turing Award Winner) and Henry Fuchs (ACM Fellow), attracting 150+ participants.
+                                </div>
                             </div>
                             <div className="text-md mb-2 border-l border-[#097969] pl-2 pr-2">
-                                <div >Kappa Theta Pi</div>
+                                <div><strong>Kappa Theta Pi</strong></div>
                                 <div>Member</div>
-                                <div>2021-2023</div>
-                            </div>
-                            <div className="text-md mb-2 border-l border-[#097969] pl-2 pr-2">
-                                <div >CS + SG</div>
-                                <div>Member</div>
-                                <div>2021-2022</div>
-                            </div>
-                            <div className="text-md mb-2 border-l border-[#097969] pl-2 pr-2">
-                                <div >Intramural Sports</div>
-                                <div>Member</div>
-                                <div>2021-2023</div>
+                                <div className="text-sm mb-1">2021-2023</div>
+                                <div>
+                                Kappa Theta Pi is a co-ed professional computer science fraternity at UNC that focuses on fostering a community of passionate students dedicated to technology and leadership. It offers opportunities for networking, skill development, and collaboration through events, workshops, and mentorship programs.
+                                </div>
                             </div>
                         </AccordionContent>
                     </AccordionItem>
@@ -99,7 +101,7 @@ export default function CV() {
                     </div>
                     <div className="font-normal flex items-center justify-center space-x-2">
                         <Label htmlFor="mode">
-                            {showSection ? "Resume Mode" : "Overview Mode"}
+                            {showSection ? "Resume" : "Overview"}
                         </Label>
                         <Switch id="mode" onClick={() => handleSectionToggle()}/>
                     </div>
@@ -107,7 +109,7 @@ export default function CV() {
                 <WorkExperience mode={showSection}/>
             </div>
             <div className="my-3 flex flex-col">
-                <div className="text-2xl font-code" >
+                <div className="text-2xl font-code mb-1" >
                     <div className="inline-block hover:text-[#097969]" onMouseEnter={() => setProjectsText(true)} onMouseLeave={() => setProjectsText(false)}>
                         {projectsText}
                     </div>

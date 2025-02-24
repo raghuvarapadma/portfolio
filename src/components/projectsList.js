@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import { Carousel, CarouselItem, CarouselContent, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import {Badge} from "@/components/ui/badge";
 import Link from "next/link";
 
@@ -33,44 +34,53 @@ export default function ProjectsList() {
         },
         {
             name: "SAP-8",
-            description: "Followed Ben Eater's 8-Bit Computer tutorial to build a simple 8-bit computer using logic gates and flip flops. Unfortunately, due to time constraints, I was unable to complete the project and was only able to build the clock module, ALU, RAM and program counter. I plan to finish up this project in the future.",
+            description: "Followed Ben Eater's 8-Bit Computer tutorial to build a simple 8-bit computer using logic gates and flip flops. Unfortunately, due to time constraints, I was unable to complete the project and was only able to build the clock module, ALU, RAM and program counter (still need to build the output and control logic modules). I learned a lot about how computers work at a low level and circuit theory/electronics, and I plan to continue working on this project in the future.",
             link: false,
-            skills: ["React", "JavaScript"]
+            skills: ["Digital Logic", "Electronics"]
         },
 
     ];
+
     return (
-        <div className="my-3 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] justify-center items-center gap-2">
-            {projects.map((project, index) => (
-                <div key={index}>
-                    <Card className="w-full h-[24rem] flex flex-col justify-between">
-                        <CardHeader className="pb-1">
-                            <CardTitle className="text-lg">
-                                {project.name}
-                            </CardTitle>
-                            {project.link && (
-                                <CardDescription className="text-sm">
-                                    <Link href="https://github.com/raghuvarapadma/portfolio">{project.link}</Link>
-                                </CardDescription>
-                            )}
-                        </CardHeader>
-                        <CardContent >
-                            <div className="text-md">
-                                {project.description}
+        <div className="my-3 flex justify-center items-center">
+            <Carousel className="w-[80%] max-w-xs sm:w-full sm:max-w-xl">
+                <CarouselContent>
+                    {projects.map((project, index) => (
+                        <CarouselItem key={index}>
+                            <div className="w-full h-full">
+                                <Card className="w-full h-full">
+                                    <CardHeader>
+                                        <CardTitle className="text-lg">
+                                            {project.name}
+                                        </CardTitle>
+                                        {project.link && (
+                                            <CardDescription className="text-sm flex flex-wrap">
+                                                <Link className="break-all" href="https://github.com/raghuvarapadma/portfolio">{project.link}</Link>
+                                            </CardDescription>
+                                        )}
+                                    </CardHeader>
+                                    <CardContent>
+                                        <div className="text-md">
+                                            {project.description}
+                                        </div>
+                                    </CardContent>
+                                    <CardFooter>
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.skills.map((skill, index) => (
+                                                <Badge key={index} className="text-xs">
+                                                    {skill}
+                                                </Badge>
+                                            ))}
+                                        </div>
+                                    </CardFooter>
+                                </Card>
                             </div>
-                        </CardContent>
-                        <CardFooter>
-                            <div className="flex flex-wrap gap-2">
-                                {project.skills.map((skill, index) => (
-                                    <Badge key={index}  className="text-xs">
-                                        {skill}
-                                    </Badge>
-                                ))}
-                            </div>
-                        </CardFooter>
-                    </Card>
-                </div>
-            ))}
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+                <CarouselPrevious/>
+                <CarouselNext/>
+            </Carousel>
         </div>
     );
 }
