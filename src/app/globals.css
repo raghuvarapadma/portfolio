@@ -22,7 +22,7 @@ body {
 
 @media (min-width: 50rem) {
   .container {
-    width: 40rem; 
+    width: 45rem; 
     margin: 0 auto; 
     padding: 0;
   }

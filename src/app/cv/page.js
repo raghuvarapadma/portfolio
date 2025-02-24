@@ -7,6 +7,7 @@ import { Accordion, AccordionItem, AccordionContent, AccordionTrigger } from "@/
 import WorkExperience from "@/components/workExperience";
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
+import ProjectsList from "@/components/projectsList";
 
 
 export default function CV() {
@@ -14,13 +15,11 @@ export default function CV() {
     const originalEducation = "Education";
     const originalWork = "Work Experience";
     const originalProjects = "Projects";
-    // const originalSkills = "Skills";
 
     const [cvText, setCVText] = binaryEffect(originalCVText);
     const [educationText, setEducationText] = binaryEffect(originalEducation);
     const [workText, setWorkText] = binaryEffect(originalWork);
     const [projectsText, setProjectsText] = binaryEffect(originalProjects);
-    // const [skillsText, setSkillsText] = binaryEffect(originalSkills);
 
     const [showSection, setShowSection] = useState(false);
 
@@ -47,7 +46,7 @@ export default function CV() {
                 <div className="flex flex-row justify-between">
                     <div>
                         <div className="text-lg">
-                            University of North Carolina at Chapel Hill
+                            <strong>University of North Carolina at Chapel Hill</strong>
                         </div>
                         <div className="text-md my-.5">
                             Bachelor of Science in Computer Science, Minor in Statistics
@@ -107,42 +106,14 @@ export default function CV() {
                 </div>
                 <WorkExperience mode={showSection}/>
             </div>
-            <div className="text-2xl my-6">
+            <div className="my-3 flex flex-col">
                 <div className="text-2xl font-code" >
                     <div className="inline-block hover:text-[#097969]" onMouseEnter={() => setProjectsText(true)} onMouseLeave={() => setProjectsText(false)}>
                         {projectsText}
                     </div>
                 </div>
+                <ProjectsList />
             </div>
-            {/* <div className="text-2xl my-6">
-                <div className="text-2xl font-code" >
-                    <div className="inline-block hover:text-[#097969]" onMouseEnter={() => setSkillsText(true)} onMouseLeave={() => setSkillsText(false)}>
-                        {skillsText}
-                    </div>
-                </div>
-                <div>
-                    <div className="text-sm my-2">
-                        <Badge className="mr-1 mb-1">Python</Badge>
-                        <Badge className="mr-1 mb-1">Java</Badge>
-                        <Badge className="mr-1 mb-1">C</Badge>
-                        <Badge className="mr-1 mb-1">JavaScript</Badge>
-                        <Badge className="mr-1 mb-1">HTML</Badge>
-                        <Badge className="mr-1 mb-1">CSS</Badge>
-                        <Badge className="mr-1 mb-1">SQL</Badge>
-                        <Badge className="mr-1 mb-1">React.js</Badge>
-                        <Badge className="mr-1 mb-1">lit.dev</Badge>
-                        <Badge className="mr-1 mb-1">Next.js</Badge>
-                        <Badge className="mr-1 mb-1">Tailwind CSS</Badge>
-                        <Badge className="mr-1 mb-1">Node.js</Badge>
-                        <Badge className="mr-1 mb-1">Spring Boot</Badge>
-                        <Badge className="mr-1 mb-1">Flask</Badge>
-                        <Badge className="mr-1 mb-1">PostgreSQL</Badge>
-                        <Badge className="mr-1 mb-1">Firebase</Badge>
-                        <Badge className="mr-1 mb-1">AWS</Badge>
-                    </div>
-                </div>
-            </div> */}
-
         </div>
     )
 }
