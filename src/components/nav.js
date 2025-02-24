@@ -4,7 +4,7 @@ import {binaryEffect} from "./binaryEffect";
 
 export default function Nav() {
 
-    const originalLogoText = "raghu.dev";
+    const originalLogoText = "raghupadma.dev";
     // const originalHomeText = "home";
     const originalCVText = "cv";
     const originalBlogText = "blog";
@@ -24,7 +24,7 @@ export default function Nav() {
                     </Link>
                 </div>
                 <nav className="flex-1 flex items-center justify-end">
-                    <div className="flex gap-7 justify-end">
+                    <div className="flex gap-4 sm:gap-7 justify-end">
                         {/* <Link href="/" className="hover:text-[#097969] flex-1 flex items-center justify-center" onMouseEnter={() => setHoveringOverHomePage(true)} onMouseLeave={() => setHoveringOverHomePage(false)}>
                             {homePageText}
                         </Link> */}
