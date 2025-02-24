@@ -76,9 +76,9 @@ export default function Home() {
           <br />
           Currently, I work as a software engineer at Capital One in the Retail Banking space, where I help facilitate the movement of money between different banking products owned by Capital One. <br />
           <br />
-          Outside of work, I have a few hobbies I enjoy. Being from Charlotte, NC, I'm a Panthers fan (unfortunately) and a UNC fan. Aside from watching football, I love reading, watching movies, exploring new TV shows, and trying to stay active. I also enjoy spending time outdoors—over the past year, I've picked up skiing and golfing (still a work in progress on both).<br /> 
+          Outside of work, I have a few hobbies I enjoy. I'm big into sports—especially football and basketball (March is indisputably the best month of the year). Being from Charlotte, NC, I'm a Panthers fan (I'd like to think it builds character) and a UNC fan. Beyond sports, I love reading, watching movies, exploring new TV shows, and staying active. I also enjoy spending time outdoors—over the past year, I've picked up skiing and golfing. Let's just say I spend a lot of time in the snow and the rough, but improvement is the goal.<br />
           <br />
-          One of my goals this year is to be better about meeting new people. Whether you want to talk about software engineering, say hi, or discuss anything else, feel free to reach out to me. The best way to get in touch is through email at raghuvarapadma [@] gmail.com.<br />
+          One of my goals this year is to connect with more people and have great conversations. Whether you want to chat about software engineering, say hi, or talk about anything else, I'd love to hear from you! Feel free to reach out—email me at raghuvarapadma [@] gmail.com.<br />
         </div>
       </div>
       <div className="border-t-2 border-[#097969] my-6"></div>
