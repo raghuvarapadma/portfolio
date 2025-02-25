@@ -10,7 +10,7 @@ export default function ProjectsList() {
     const projects = [
         {
             name: "Portfolio",
-            description: "Built this portfolio website using React and Tailwind CSS, hosted on Vercel, and made the code open source for others to learn from. This website is an on-going project, and I plan on adding more features and improving the design.",
+            description: "Built this portfolio website using React and Tailwind CSS, hosted on Vercel. This website is an on-going project, and I plan on adding more features and improving the design.",
             link: "https://github.com/raghuvarapadma/portfolio",
             skills: ["JavaScript", "next.js", "Tailwind CSS"]
         },
@@ -24,7 +24,7 @@ export default function ProjectsList() {
             name: "Creamy Scoops Website",
             description: "Built a website for a local ice cream shop using React.js, Flask, and Firebase Realtime Database, hosted on Cloudflare and DigitalOcean. The site lets users view the menu, contact the store, and allows owners to manage the menu and promotions. I plan to make improvements to the site in the near future.",
             link: "https://creamy-scoops.com",
-            skills: ["JavaScript", "react.js", "Flask", "Firebase Realtime Database", "Cloudflare", "DigitalOcean"]
+            skills: ["JavaScript", "react.js", "Flask", "nginx", "Firebase Realtime Database", "Cloudflare", "DigitalOcean"]
         },
         {
             name: "MiniJava Compilier",

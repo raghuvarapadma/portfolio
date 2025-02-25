@@ -10,10 +10,10 @@ export function ThemeProvider({
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true) // This ensures the theme is only rendered after the component is mounted on the client
+    setMounted(true) 
   }, [])
 
-  // If not mounted, return nothing to prevent hydration mismatch
+  
   if (!mounted) {
     return null
   }
