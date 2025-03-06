@@ -3,6 +3,7 @@ import React, {useState, useEffect} from "react";
 import Nav from "@/components/nav";
 import {binaryEffect} from "../../components/binaryEffect";
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Blog() {
     const blogPageOriginalText = "Blog";
@@ -25,24 +26,14 @@ export default function Blog() {
             <div className="border-t-2 border-[#097969] my-6"></div>
             <div className="my-3 flex flex-col">
                 <Card className="my-2 h-full flex flex-col bg-transparent p-4">
-                    {/* <Link href="google.com"> */}
+                    <Link href="https://raghupadma.substack.com/p/expanding-my-world-through-words">
                         <div className="text-lg font-code">
-                            Findings From My Failed Polymarket Bot
+                            Expanding My World Through Words
                         </div>
                         <div className="text-md font-code">
-                            (Coming soon)
+                            March 2, 2025
                         </div>
-                    {/* </Link> */}
-                </Card>
-                <Card className="my-2 h-full flex flex-col bg-transparent p-4">
-                    {/* <Link href="google.com"> */}
-                        <div className="text-lg font-code">
-                            Why This Blog?
-                        </div>
-                        <div className="text-md font-code">
-                            (Coming soon)
-                        </div>
-                    {/* </Link> */}
+                    </Link>
                 </Card>
             </div>
         </div>
