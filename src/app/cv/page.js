@@ -36,7 +36,6 @@ export default function CV() {
 
     return (
         <div className={`transition-all duration-500 ease-out ${isVisible ? 'h-full opacity-100' : 'h-0 opacity-0'}`}>
-            <Nav></Nav>
             <div className="text-3xl my-3">
                 <div className="font-code inline-block hover:text-[#097969]" onMouseEnter={() => setCVText(true)} onMouseLeave={() => setCVText(false)}>
                     {cvText}

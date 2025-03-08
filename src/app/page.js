@@ -19,7 +19,6 @@ export default function Home() {
 
   return (
     <div className={`transition-all duration-500 ease-out ${isVisible ? 'h-full opacity-100' : 'h-0 opacity-0'}`}>
-      <Nav></Nav>
       <div className="flex flex-row">
         <div className="flex-1 flex flex-col items-left justify-center">
           <div className="my-3">

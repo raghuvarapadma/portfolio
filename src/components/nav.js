@@ -16,7 +16,7 @@ export default function Nav() {
     const [hobbiesPageText, setHoveringOverHobbiesPage] = binaryEffect(originalHobbiesText);
 
     return (
-        <div className="font-code my-5 sm:my-8">
+        <div className="font-code my-5 sm:my-8 ">
             <div className="flex items-center justify-between">
                 <div className="flex-1 flex items-center justify-start transition-all">
                     <Link href="/" className="hover:text-[#097969]" onMouseEnter={() => setHoveringOverLogo(true)} onMouseLeave={() => setHoveringOverLogo(false)}>
